@@ -1,6 +1,6 @@
 # animel-game
 
-This template should help get you started developing with Vue 3 in Vite.
+This project is about choosing the right food for their respective animal.
 
 ## Recommended IDE Setup
 
