@@ -18,7 +18,7 @@ const checkAnswer = (answer,choice) => {
 
 <template>
     <div class="w-full nes-container with-title">
-        <p class="title">Level 2</p>
+        <p class="title">Level 3</p>
         <div class="flex flex-col">
           <div class="flex">
             <img class="w-28" src="@/assets/8-bit-lungs.png" alt="rabbit">
