@@ -29,7 +29,7 @@ const nextLevel = (data) => {
   <div v-if="audioPlay === false"
     class="m-auto flex justify-center items-center"
     style="
-      width: 95%;
+      width: 100vw;
       height : 100vh;
       background-color: #222222;
       color: azure;"
