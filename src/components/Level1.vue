@@ -31,7 +31,7 @@ const checkAnswer = (answer,choice) => {
             <div class="nes-balloon from-right capitalize is-dark">
               <p v-if="isCorrect === true" class="is-success">{{ chosenAnswer }}</p>
               <p v-else-if="isCorrect === false" class="is-danger">{{ chosenAnswer }}</p>
-              <div v-else class="flex flex-col gap-1">
+              <div v-else class="flex flex-col">
                 <button class="nes-btn" @click="checkAnswer(true,'carrot')">Carrot</button>
                 <button class="nes-btn" @click="checkAnswer(false,'apple')">Apple</button>
                 <button class="nes-btn" @click="checkAnswer(false,'banana')">Banana</button>

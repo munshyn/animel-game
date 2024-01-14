@@ -4,6 +4,7 @@ import bgMusic from './assets/bg-music.mp3'
 import Level1 from './components/Level1.vue';
 import Level2 from './components/Level2.vue';
 import Level3 from './components/Level3.vue';
+import SideTitle from './components/SideTitle.vue';
 
 const level = ref(1)
 
@@ -37,28 +38,18 @@ const nextLevel = (data) => {
     <div>
       <p class="text-5xl">Welcome to Animel Game</p>
       <i class="block my-5 mx-auto nes-octocat animate nes-pointer" @click="toggleAudio"></i>
-      <p class="text-center typewriter">Click the cat to continue...</p>
+      <p class="text-center typewriter">Click the cat to start playing...</p>
     </div>    
   </div>
   <div v-else>
     <div class="flex flex-nowrap">
-      <div class="flex justify-center items-center"
-        style="
-          writing-mode: vertical-lr;
-          width: 16.67%;
-          height : 100vh;
-          background-color: #222222;
-          color: azure;
-          text-orientation: upright;"
-      >
-        <p class="text-4xl tracking-widest">Animel Game</p>
-      </div>
+      <SideTitle></SideTitle>
       <div class="w-2/3 flex flex-col items-center">
         <i class="block my-5 mx-auto nes-octocat animate"></i>
         <Level1 v-if="level === 1"></Level1>
         <Level2 v-if="level === 2"></Level2>
         <Level3 v-if="level === 3"></Level3>
-        <div :class="['flex w-5/6 mt-3', {
+        <div :class="['flex w-full px-3 mt-3', {
           'justify-between' : level === 2,
           'justify-end' : level === 1
         }]">
@@ -66,17 +57,7 @@ const nextLevel = (data) => {
           <button v-if="level !== 3"  class="nes-btn is-primary" @click="nextLevel(true)">Next Level</button>
         </div>      
       </div>
-      <div class="flex justify-center items-center"
-        style="
-          writing-mode: vertical-lr;
-          width: 16.67%;
-          height : 100vh;
-          background-color: #222222;
-          color: azure;
-          text-orientation: upright;"
-      >
-        <p class="text-4xl tracking-widest">Animel Game</p>
-      </div>
+      <SideTitle></SideTitle>
     </div>
   </div>
 </template>
