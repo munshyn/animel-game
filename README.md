@@ -1,6 +1,7 @@
 # animel-game
 
-This project is about choosing the right food for their respective animal.
+This project is to showcase for new students the power of JS and CSS.
+Additional CSS framework used: NES CSS
 
 ## Recommended IDE Setup
 
